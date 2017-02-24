@@ -16,7 +16,7 @@
 					<td><a href="http://localhost:8082/ci226/addnew">Add New</a></td>
 					<td><a href="http://localhost:8082/ci226/deposit">Deposit</a></td>
 					<td><a href="http://localhost:8082/ci226/withdraw">Withdraw</a></td>
-					<td><a href="#">Transfer</a></td>
+					<td><a href="http://localhost:8082/ci226/transfer">Transfer</a></td>
 					<td><a href="http://localhost:8082/ci226/home/logout">Logout</a></td>
 				</tr>
 			</table>

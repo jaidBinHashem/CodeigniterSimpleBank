@@ -67,9 +67,24 @@ class Accountmodel extends CI_Model {
 			return false;
 		}
 		
-		$sql = "UPDATE accounts SET balance = balance-$amount where account_no='$accno'";
+		$time = date('Y-m-d H:i:s');
+		$sql = "UPDATE accounts SET balance = balance-'$amount', last_tran = '$time'  where account_no='$accno'";
 
 		$this->db->query($sql);
 		return true;
+	}
+
+	public function transfer($fraccno,$toaccno, $amount)
+	{
+		if($this->withdraw($fraccno, $amount))
+		{
+			$this->deposit($toaccno, $amount);
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
+		
 	}
 }

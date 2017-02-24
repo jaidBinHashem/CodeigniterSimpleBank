@@ -33,7 +33,7 @@
 			<label><?php echo $message; ?></label>
 			<br/>
 			<br/>
-			<a href="#">Back to Home</a>
+			<a href="http://localhost:8082/ci226/home">Back to Home</a>
 		</center>
 	</body>
 </html>

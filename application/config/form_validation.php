@@ -23,5 +23,34 @@ $config = array(
 				'label' => 'Amount',
 				'rules' => 'required'
 				),
-		)
-	);
+		),
+	'withdraw' => array(
+			array(
+				'field' => 'accno',
+				'label' => 'Account Number',
+				'rules' => 'required'
+				),
+			array(
+				'field' => 'amount',
+				'label' => 'Amount',
+				'rules' => 'required'
+				)
+		),
+	'transfer' => array(
+			array(
+				'field' => 'fraccno',
+				'label' => 'From Account Number',
+				'rules' => 'required'
+				),
+			array(
+				'field' => 'toaccno',
+				'label' => 'To Account Number',
+				'rules' => 'required'
+				),
+			array(
+				'field' => 'amount',
+				'label' => 'Amount',
+				'rules' => 'required'
+				)
+			)
+		);
