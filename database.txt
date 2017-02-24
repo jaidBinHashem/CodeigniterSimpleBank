@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS bankdb DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE bankdb;
+
+
+CREATE TABLE users (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
+  `type` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO users (user_id, username, `password`, `type`) VALUES
+(1, 'admin', 'admin', 'Admin'),
+(2, 'user1', 'User1', 'user'),
+(3, 'imran', '1234', 'User'),
+(4, 'test', 'test', 'User');
+ALTER TABLE users
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+ALTER TABLE users
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
