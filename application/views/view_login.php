@@ -23,6 +23,11 @@
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
+						<td><?php echo $captcha?></td>
+					</tr>
+					<?php echo $captchaField ?>
+					<tr>
+						<td>&nbsp;</td>
 						<td><input type="submit" value="Login" name="buttonLogin" /></td>
 					</tr>
 				</table>
